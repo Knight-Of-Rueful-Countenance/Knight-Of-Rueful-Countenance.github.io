@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.polaroid {
+  width: 250px;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  font-size: 1rem;
+  transition: box-shadow 0.35s, width 0.5s linear, height 0.5s linear, font-size 0.5s linear;
+}
+
+div.polaroid:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+    transition: box-shadow 0.35s;
+}
+
+div.polaroid img {
+	height: 170px;
+}
+
+div.polaroid:active {
+	width: 0px;
+    height: 0px;
+    font-size: 0rem;
+    transition: width 0.5s ease-in, height 0.5s ease-in, font-size 0.5s ease-in;
+}
+
+div.container {
+  padding: 10px;
+}	
+
+div.flex {
+  width: 250px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.flex2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+div.flex2 > * {
+	margin-left: 2rem
+}
+div.flex2:first-child {
+	margin-left: 0px;
+}
+
+.selector .bottom-image {
+  display: none;
+}
+
+.selector .bottom-image:target {
+  display: block;
+  width: calc(100% - 60px);
+  height: auto;
+}
+
+
+.bottom-image {
+	max-width: 75%;
+    min-height: 75%;
+}
+.test {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>
+</head>
+<body>
+<h2>Polaroid Images / Cards</h2>
+
+<p>The box-shadow property can be used to create paper-like cards:</p>
+<div class="selector">
+<div class="flex2">
+<div class="flex">
+<a href="#link1">
+<div class="polaroid">
+  <img src="rock600x400.jpg" alt="Norway" style="width:100%">
+  <div class="container">
+    <p>Hardanger, Norway</p>
+  </div>
+</div>
+</a> 
+</div>
+<div class="flex">
+<a href="#link2">
+<div class="polaroid">
+  <img src="https://static.designboom.com/wp-content/uploads/2014/02/gif500.gif" alt="Pixel" style="width:100%">
+  <div class="container">
+    <p>Hardanger, Norway</p>
+  </div>
+</div>
+</a> 
+</div>
+<div class="flex">
+<a href="#link3">
+<div class="polaroid">
+  <img src="https://germancarsforsaleblog.com/wp-content/uploads/2013/03/93923_045fb81a44_low_res.jpg" alt="Norway" style="width:100%">
+  <div class="container">
+    <p>Hardanger, Norway</p>
+  </div>
+</div>
+</a> 
+</div>
+</div>
+
+<div class="test">
+<iframe id="link1" class="bottom-image" src="https://www.youtube.com/embed/64Hilbd_jMg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe  id="link2" class="bottom-image" src="https://www.youtube.com/embed/6n7rSb4JptI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<img id="link3" src="https://germancarsforsaleblog.com/wp-content/uploads/2013/03/93923_045fb81a44_low_res.jpg" alt="Norway" class="bottom-image">
+</div>
+
+</div>
+</body>
+</html>
